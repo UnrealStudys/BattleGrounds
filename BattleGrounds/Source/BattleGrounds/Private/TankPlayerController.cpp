@@ -13,9 +13,8 @@ void ATankPlayerController::BeginPlay()
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("%s tank is being controlled"), *ControlledTank->GetName());
+		UE_LOG(LogTemp, Warning, TEXT("%s tank is being controlled by a player"), *ControlledTank->GetName());
 	}
-	UE_LOG(LogTemp, Warning, TEXT("Player controller begin play"));
 }
 
 
@@ -23,3 +22,4 @@ ATank* ATankPlayerController::GetControlledTank() const
 {
 	return Cast<ATank>(GetPawn());
 }
+
