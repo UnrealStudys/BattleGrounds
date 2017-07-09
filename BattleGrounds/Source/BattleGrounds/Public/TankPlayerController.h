@@ -18,4 +18,11 @@ class BATTLEGROUNDS_API ATankPlayerController : public APlayerController
 	ATank* GetControlledTank() const;
 
 	virtual void BeginPlay() override;
+
+	virtual void Tick(float DeltaSeconds) override;
+
+	//start moving the barrel and turret so that a shot would hit where
+	//the crosshair intersects with the world
+	
+	void AimTowardsCrosshair();
 };
